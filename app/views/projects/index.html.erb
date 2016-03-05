@@ -1,0 +1,12 @@
+<div class="container">
+  <% @project.each do |project| %>
+    <ul>
+      <li>
+      <%= link_to project.link do %>
+        <%= project.name %>
+      <% end %>
+
+      </li>
+    </ul>
+  <%end%>
+</div>
