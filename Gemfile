@@ -31,6 +31,7 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-rails'
 gem 'ionicons-rails'
 gem 'pry'
+gem 'figaro'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
