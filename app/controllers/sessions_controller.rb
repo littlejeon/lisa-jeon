@@ -1,5 +1,10 @@
 class SessionsController < ApplicationController
   skip_before_action :authorize
+
+  def index
+    @user = User.find_by(email: params[:email])
+  end
+
   def new
     # render the page that shows the log in form
   end
