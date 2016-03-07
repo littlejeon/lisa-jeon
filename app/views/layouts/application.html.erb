@@ -45,38 +45,10 @@
                             <!-- Nav Dropdown -->
                             <ul class="nav-dropdown">
                                 <li class="nav-has-sub">
-                                    <a href='#'>QuickByte</a>
-                                    <ul class="nav-sub-dropdown">
-                                        <li><a href="home.html">Default</a></li>
-                                        <li><a href="home-video.html">Intro Video</a></li>
-                                        <li><a href="home-youtube.html">Intro Youtube</a></li>
-                                        <li><a href="home-static.html">Intro Static</a></li>
-                                        <li><a href="home-agency-grid.html">Agency Grid</a></li>
-                                        <li><a href="home-agency-masonry.html">Agency Masonry</a></li>
-                                        <li><a href="home-fullwidth-slider.html">Fullwidth Slider</a></li>
-                                        <li><a href="home-text-rotator1.html">Text Rotator1</a></li>
-                                        <li><a href="home-text-rotator2.html">Text Rotator2</a></li>
-                                        <li><a href="home-personal.html">Personal</a></li>
-                                        <li><a href="home-fullscreen.html">Full Screen</a></li>
-                                        <li><a href="home-canvas-pattern.html">Canvas Pattern</a></li>
-                                        <li><a href="home-section-scroll.html">Page Section Scroll</a></li>
-                                        <li><a href="shop-2col.html">Shop</a></li>
-                                        <li><a href="home-coming-soon.html">Comming Soon</a></li>
-                                    </ul>
+                                    <a target='blank' href='https://quick-byte.herokuapp.com/'>QuickByte</a>
                                 </li>
                                 <li class="nav-has-sub">
-                                    <a href="#">Fiddle D. Fig</a>
-                                    <ul class="nav-sub-dropdown">
-                                        <li><a href="onepage.html">Default</a></li>
-                                        <li><a href="onepage-personal.html">Personal</a></li>
-                                        <li><a href="onepage-video.html">Video</a></li>
-                                        <li><a href="onepage-youtube.html">Youtube</a></li>
-                                        <li><a href="onepage-static.html">Static</a></li>
-                                        <li><a href="onepage-fullwidth-slider.html">Fullwidth</a></li>
-                                        <li><a href="onepage-text-rotator1.html">Text Rotator1</a></li>
-                                        <li><a href="onepage-text-rotator2.html">Text Rotator2</a></li>
-                                        <li><a href="onepage-canvas-pattern.html">Canvas Pattern</a></li>
-                                    </ul>
+                                    <a target ='blank' href="https://fiddle-d-fig.herokuapp.com">Fiddle D. Fig</a>
                                 </li>
                             </ul>
                             <!-- End Nav Dropdown -->
@@ -90,49 +62,9 @@
                             <% end %>
                         </li>
                         <li>
-                            <a>Blog</a>
-                            <!-- Nav Dropdown -->
-                            <ul class="nav-dropdown">
-
-                                <li class="nav-has-sub">
-                                    <a href=''>Grid</a>
-                                    <ul class="nav-sub-dropdown">
-                                        <li><a href="blog-grid-2col.html">2 Columns</a></li>
-                                        <li><a href="blog-grid-2col-sidebar.html">2 Columns - sidebar</a></li>
-                                        <li><a href="blog-grid-3col.html">3 Columns</a></li>
-                                    </ul>
-                                </li>
-
-                                <li class="nav-has-sub">
-                                    <a href="">Masonry</a>
-                                    <ul class="nav-sub-dropdown">
-                                        <li><a href="blog-masonry-2col.html">2 Columns</a></li>
-                                        <li><a href="blog-masonry-2col-sidebar.html">2 Columns - sidebar</a></li>
-                                        <li><a href="blog-masonry-3col.html">3 Columns</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-has-sub">
-                                    <a href="">One Columns</a>
-                                    <ul class="nav-sub-dropdown">
-                                        <li><a href="blog-1col.html">no-sidebar</a></li>
-                                        <li><a href="blog-1col-sidebar.html">with sidebar</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-has-sub">
-                                    <a href="">Blog Detail</a>
-                                    <ul class="nav-sub-dropdown">
-                                        <li><a href="blog-single-image-post.html">Image Post</a></li>
-                                        <li><a href="blog-single-slider-post.html">Slider Post</a></li>
-                                        <li><a href="blog-single-video-post.html">Video Post</a></li>
-                                        <li><a href="blog-single-audio-post.html">Audio Post</a></li>
-                                        <li><a href="blog-single-youtube-post.html">Youtube Post</a></li>
-                                        <li><a href="blog-single-vimeo-post.html">Vimeo Post</a></li>
-                                        <li><a href="blog-single-quote-post.html">Quote Post</a></li>
-                                    </ul>
-                                </li>
-
-                            </ul>
-                            <!-- End Nav Dropdown -->
+                            <%= link_to 'https://littlejeon.ghost.io/', target: 'blank' do %>
+                                Blog
+                            <% end %>
                         </li>
 
                         <li>
@@ -149,20 +81,21 @@
         <!-- END HEADER -->
 
         <% if current_uri %>
-        <!-- CONTENT --------------------------------------------------------------------------------->
-        <!-- Intro Section -->
-        <section class="inner-intro bg-img13 parallax parallax-background2">
-            <div class="container">
-                <div class="row title">
-                    <h2 class="h2">Blank</h2>
-                    <div class="page-breadcrumb">
-                        <a>Home</a>/<span>Blank Page</span>
+            <!-- CONTENT --------------------------------------------------------------------------------->
+            <!-- Intro Section -->
+            <section class="inner-intro bg-img13 parallax parallax-background2">
+                <div class="container">
+                    <div class="row title">
+                        <h2 class="h2">Welcome</h2>
+                        <div class="page-breadcrumb">
+                            <!-- <a>Home</a>/<span>Blank Page</span> -->
+                            <span>You made it!</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <div class="clearfix"></div>
-        <!-- End Intro Section -->
+            </section>
+            <div class="clearfix"></div>
+            <!-- End Intro Section -->
         <% end %>
 
 

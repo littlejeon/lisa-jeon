@@ -23,6 +23,9 @@
                                         <div class="item-caption">
                                             <h5 class="white"><%= portfolio.description %></h5>
                                             <p class="white"><%= portfolio.tags %></p>
+                                            <% if logged_in? %>
+                                                <%= link_to 'EDIT', edit_portfolio_path(portfolio), class: 'white' %>
+                                            <% end %>
                                         </div>
                                     </div>
                                 <% end %>

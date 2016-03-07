@@ -24,12 +24,13 @@ class PortfoliosController < ApplicationController
 
   def update
     @portfolio = Portfolio.find(params[:id])
-    portfolio.update(project_params)
+    @portfolio.update(portfolio_params)
+    redirect_to portfolios_path
   end
 
   def delete
     @portfolio = Portfolio.find(params[:id])
-    portfolio.delete
+    @portfolio.delete
   end
 
   private
