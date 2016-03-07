@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   before_action :authorize
-  helper_method :current_user, :logged_in?
+  helper_method :current_user, :logged_in?, :current_uri
 
 
   private
@@ -18,6 +18,10 @@ class ApplicationController < ActionController::Base
 
   def logged_in?
     !!current_user
+  end
+
+  def current_uri
+    request.env['PATH_INFO'] == '/'
   end
 
 end

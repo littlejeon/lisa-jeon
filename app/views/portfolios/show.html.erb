@@ -1,0 +1,5 @@
+<div class="container">
+  <h4><%= @portfolio.name %></h4>
+  <p><%= @portfolio.description %></p>
+  <%= image_tag @portfolio.image_upload.url(:medium) %>
+</div>
