@@ -8,6 +8,10 @@
                         <li><a class="categories" data-filter=".illustration">Illustration</a></li>
                         <li><a class="categories" data-filter=".photography">Photography</a></li>
                         <li><a class="categories" data-filter=".graphicdesign">Graphic Design</a></li>
+                        <% if logged_in? %>
+                            <%= link_to 'NEW', new_portfolio_path, class: "btn btn-sm btn-black" %>
+    
+                        <% end %>
                     </ul>
                 </div>
                 <!-- End work Filter -->
@@ -15,7 +19,7 @@
 
 
                     <% @portfolio.each do |portfolio| %>
-                        <div class="nf-item spacing ruby <%= portfolio.tags %>">
+                        <div class="nf-item spacing <%= portfolio.tags %>">
                             <div class="item-box">
                                 <%= link_to portfolio.image_upload.url(:large), class: 'cbox-gallary1', title: portfolio.name do %>
                                     <%= image_tag portfolio.image_upload.url(:medium), class: 'item-container', alt: '1' %>
