@@ -29,14 +29,15 @@ class PortfoliosController < ApplicationController
     redirect_to portfolios_path
   end
 
-  def delete
+  def destroy
     @portfolio = Portfolio.find(params[:id])
-    @portfolio.delete
+    @portfolio.destroy
+    redirect_to portfolios_path
   end
 
   private
   def portfolio_params
-    params.require(:portfolio).permit(:name, :description, :tags, :image_upload)
+    params.require(:portfolio).permit(:name, :description, :tags, :image_upload, :user_id)
   end
 
 end

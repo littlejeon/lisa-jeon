@@ -21,7 +21,7 @@ class ProjectsController < ApplicationController
   def create
     # binding.pry
     @project = Project.create(project_params)
-    redirect_to root_path
+    redirect_to projects_path
   end
 
   def edit
@@ -29,18 +29,20 @@ class ProjectsController < ApplicationController
   end
 
   def update
-    project = Project.find(params[:id])
-    project.update(project_params)
+    @project = Project.find(params[:id])
+    @project.update(project_params)
+    redirect_to projects_path
   end
 
-  def delete
-    project = Project.find(params[:id])
-    project.delete
+  def destroy
+    @project = Project.find(params[:id])
+    @project.destroy
+    redirect_to projects_path
   end
 
   private
   def project_params
-    params.require(:project).permit(:name, :description, :link, :user_id)
+    params.require(:project).permit(:name, :description, :link, :user_id, :image_upload, :bullets)
   end
 
 end
