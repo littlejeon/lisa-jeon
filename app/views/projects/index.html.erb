@@ -36,12 +36,110 @@
                               <%= project.bullets %>
                             </div>
                             <%= link_to 'See Demo', project.link, class: 'btn btn-md btn-primary', target: '_blank' %>
-
-
                         </div>
+                        <!-- Tab -->
+                                                    <div class="tabs mt-15">
+
+                                                        <ul>
+                                                            <li><a href="#tabs-1">Description</a></li>
+                                                            <li><a href="#tabs-2">Data sheet</a></li>
+                                                            <li><a href="#tabs-3">Review</a></li>
+                                                        </ul>
+
+                                                        <div class="ui-tab-content">
+                                                            <!-- Description -->
+                                                            <div id="tabs-1">
+                                                                <p>Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+                                                                <ul class="list-inside gray pl-0 mt-15">
+                                                                    <li>100% Cotton</li>
+                                                                    <li>Size: W30" x H60" x L5cm / W30" x H60" x L5cm</li>
+                                                                    <li>Omnis iste natus error sit voluptatem accusantium.</li>
+                                                                </ul>
+                                                            </div>
+                                                            <!-- End Description -->
+
+                                                            <!-- Data sheet -->
+                                                            <div id="tabs-2">
+                                                                <table class="table table-striped">
+                                                                    <tr>
+                                                                        <th>Title</th>
+                                                                        <th>Info</th>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Compositions</td>
+                                                                        <td>Wool</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Styles</td>
+                                                                        <td>Rock</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Properties</td>
+                                                                        <td>Short Sleeve</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Brand</td>
+                                                                        <td>Zara</td>
+                                                                    </tr>
+                                                                </table>
+                                                            </div>
+                                                            <!-- End Data sheet -->
+
+                                                            <!-- Review -->
+                                                            <div id="tabs-3">
+                                                                <div class="post-comment">
+                                                                    <ul class="comment-list mb-30 mt-15">
+                                                                        <li>
+                                                                            <div class="comment-avatar">
+                                                                                <img src="img/user-av.jpg">
+                                                                            </div>
+                                                                            <div class="">
+                                                                                <div class="comment-detail">
+                                                                                    <h6>John Doe</h6>
+                                                                                    <div class="post-meta">
+                                                                                        <span>March 16, 2015</span> <span>|</span>
+                                                                                        <span class="star-rat">
+                                                                                            <a><i class="fa fa-star"></i></a>
+                                                                                            <a><i class="fa fa-star"></i></a>
+                                                                                            <a><i class="fa fa-star-o"></i></a>
+                                                                                            <a><i class="fa fa-star-o"></i></a>
+                                                                                            <a><i class="fa fa-star-o"></i></a>
+                                                                                        </span>
+
+                                                                                    </div>
+                                                                                    <p>Hendrerit id Maecenas tempus tellus eget lorem.</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+
+                                                                <h5>Write a Review</h5>
+                                                                <form>
+                                                                    <div class="post-comment-star">
+                                                                        <label>Ratting :</label>
+                                                                        <div class="star-rat">
+                                                                            <a><i class="fa fa-star"></i></a>
+                                                                            <a><i class="fa fa-star"></i></a>
+                                                                            <a><i class="fa fa-star-o"></i></a>
+                                                                            <a><i class="fa fa-star-o"></i></a>
+                                                                            <a><i class="fa fa-star-o"></i></a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <input type="text" style="max-width: 250px; width: 100%;" placeholder="Enter Your Name" class="input-sm mb-15" required="" />
+                                                                    <div class="clearfix"></div>
+                                                                    <textarea placeholder="Comment" name="message" id="message" required="" class="form-full mb-15"></textarea>
+                                                                    <button value="" type="submit" class="btn btn-xs btn-black">Submit Review</button>
+                                                                </form>
+                                                            </div>
+                                                            <!-- End Review -->
+                                                        </div>
+                                                    </div>
+                                                    <!-- End Tab -->
                     </div>
                     <!-- End Shop info -->
                 </div>
+
                 <br><br>
               <% end %>
             </div>
