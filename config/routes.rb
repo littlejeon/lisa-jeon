@@ -5,9 +5,12 @@ Rails.application.routes.draw do
 
   get 'signup' => 'users#new'
   post 'users' => 'users#create'
-  get 'login', :to => 'sessions#new'
-  post 'login', :to => 'sessions#create'
-  delete 'logout', :to => 'sessions#destroy'
+  get 'login' => 'sessions#new'
+  post 'login' => 'sessions#create'
+  delete 'logout' => 'sessions#destroy'
+  get 'about' => 'users#about'
+  get 'resume' => 'users#resume'
+  get 'contact' => 'users#contact'
 
   resources :sessions
   resources :projects

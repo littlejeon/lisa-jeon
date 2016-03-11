@@ -1,0 +1,26 @@
+<div class="container">
+  <!-- LEFT SIDE -->
+  <div class="col-sm-12 col-md-4 col-lg-5">
+    <div class="container">
+    <%= image_tag lisa.image_upload.url(:large), style: 'width:350px;' %>
+    </div>
+  </div>
+  <!-- LEFT SIDE END -->
+
+  <!-- RIGHT SIDE -->
+  <div class="col-sm-12 col-md-8 col-lg-7 mtb-25">
+    <h2>About <%= lisa.name %></h2>
+    <p style="line-height:24px;"><%= lisa.bio %></p>
+
+    <!-- Social -->
+    <div class="col-xs-12 mtb-25" id="social">
+      
+      <a target="_blank" href="https://www.twitter.com/"><i class="fa fa-linkedin fa-2x"></i></a>
+      <a target="_blank" href="https://instagram.com/"><i class="fa fa-github fa-2x"></i></a>
+      <a target="_blank" href="https://www.facebook.com/"><i class="fa fa-envelope fa-2x"></i></a>
+
+    </div>
+    <!-- End Social -->
+  </div>
+  <!-- RIGHT SIDE END -->
+</div>

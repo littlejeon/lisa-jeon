@@ -10,4 +10,13 @@ class Portfolio < ActiveRecord::Base
   # validates_attachment :avatar,
   #   content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] },
   #   size: { in: 0..100.kilobytes }
+
+  def portfolio_tags=(portfolio_tags)
+    self.tags = portfolio_tags.to_s.upcase
+  end
+
+  def portfolio_tags
+    self.tags
+  end
+
 end

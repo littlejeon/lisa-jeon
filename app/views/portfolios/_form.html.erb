@@ -1,5 +1,5 @@
 <div class="container">
-  <%= form_for(project) do |f| %>
+  <%= form_for(portfolio) do |f| %>
 
     <div class="form-field-wrapper">
       <div class = "name">
@@ -8,27 +8,19 @@
       </div>
     </div>
 
-
     <div class="form-field-wrapper">
       <div class = "description">
         <%= f.label :description %>
-        <%= f.text_field :description, :class => 'input-sm form-full' %>
+        <%= f.text_area :description, :class => 'input-sm form-full' %>
       </div>
-    </div> 
+    </div>      
 
     <div class="form-field-wrapper">
-      <div class = "bullets_array">
-        <%= f.label :bullets_array %>
-        <%= f.text_area :bullets_array, :class => 'input-sm form-full' %>
+      <div class = "tags">
+        <%= f.label :portfolio_tags %>
+        <%= f.text_field :portfolio_tags, :class => 'input-sm form-full' %>
       </div>
-    </div> 
-
-    <div class="form-field-wrapper">
-      <div class = "link">
-        <%= f.label :link %>
-        <%= f.text_field :link, :class => 'input-sm form-full' %>
-      </div>
-    </div>   
+    </div>  
 
     <div class="form-field-wrapper">
       <div class = "image_upload">
@@ -42,6 +34,5 @@
     <div class= "actions">
       <%= f.submit "submit", :class => 'btn btn-md btn-black' %>
     </div>
-
   <% end %>
 </div>

@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  skip_before_action :authorize, only: [:new, :create]
+  before_action :authorize, only: [:new, :create]
   before_action :set_user, only: [:show, :edit]
 
   def index
@@ -31,12 +31,15 @@ class UsersController < ApplicationController
   def update
     user = User.find(params[:id])
     user.update(user_params)
+    redirect_to about_path(@user)
   end
 
   def delete
     user = User.find(params[:id])
     user.destroy
   end
+
+
 
   private
 
@@ -45,6 +48,6 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:name, :bio, :email, :password, :password_confirmation)
+    params.require(:user).permit(:name, :bio, :email, :password, :password_confirmation, :image_upload)
   end
 end

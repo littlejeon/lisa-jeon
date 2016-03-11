@@ -43,13 +43,19 @@
                             <%= link_to projects_path do %>
                               Projects
                             <% end %>
+                        </li>
+
+                        <li>
+                            <%= link_to 'About', about_path %>
                             <!-- Nav Dropdown -->
                             <ul class="nav-dropdown">
-                                <li class="nav-has-sub">
-                                    <a target='blank' href='https://quick-byte.herokuapp.com/'>QuickByte</a>
+                                <li>
+                                    <%= link_to 'About', about_path %>
+                                </li>                                <li>
+                                    <%= link_to 'Contact', contact_path %>
                                 </li>
-                                <li class="nav-has-sub">
-                                    <a target ='blank' href="https://fiddle-d-fig.herokuapp.com">Fiddle D. Fig</a>
+                                <li>
+                                    <%= link_to 'Resume', resume_path %>
                                 </li>
                             </ul>
                             <!-- End Nav Dropdown -->
@@ -68,11 +74,22 @@
                             <% end %>
                         </li>
 
-                        <li>
-                            <% if logged_in? %>
-                            <%= link_to "Log Out", logout_path, method: :delete %> 
-                            <% end %>
-                        </li>
+                        <% if logged_in? %>
+                            <li>
+                                <%= link_to "Log Out", logout_path, method: :delete %> 
+                            </li>
+                            <li>
+                                <%= link_to "#" do %> 
+                                    <div class="fa fa-cog fa-2x" style="margin-top:-6px;"></div>
+                                <%end%>
+                                <ul class="nav-dropdown">
+                                    <li>
+                                        <%= link_to 'Update Profile', edit_user_path(current_user) %>
+
+                                    </li>
+                                </ul>
+                            </li>
+                        <% end %>
                     </ul>
                 </nav>
                 <!--End Navigation Menu -->
@@ -84,129 +101,50 @@
         <% if current_uri %>
             <!-- CONTENT --------------------------------------------------------------------------------->
             <!-- Intro Section -->
-            <section class="inner-intro bg-img13 parallax parallax-background2">
-                <div class="container">
-                    <div class="row title">
-                        <h2 class="h2">Welcome</h2>
-                        <div class="page-breadcrumb">
-                            <!-- <a>Home</a>/<span>Blank Page</span> -->
-                            <span>You made it!</span>
+
+            <!-- End Intro Section -->
+
+
+            <section class="full-screen-intro">
+                <!-- Bg Image -->
+                <div class="media-wapper bg-img13 cont-h-100per"></div>
+                <!-- End Bg Image -->
+
+                <!-- Content -->
+                <div class="full-cap-wraper light-color">
+                    <div class="content-caption light-color parallax parallax-opacity">
+                        <div class="container">
+
+                            <h2 class="h2">Welcome</h2>
+                            <div class="page-breadcrumb">
+                                <!-- <a>Home</a>/<span>Blank Page</span> -->
+                                <span>You made it!</span>
+                            </div>
+
+                            
                         </div>
                     </div>
                 </div>
+                <!-- End Content -->
             </section>
-            <div class="clearfix"></div>
-            <!-- End Intro Section -->
+
+
+        <%else%>
+            <!-- Blank Section -->
+            <section class="ptb ptb-sm-80">
+              <%= yield %>
+            </section>
+            <!-- End Blank Section -->
+
+            <!-- Scroll Top -->
+            <a class="scroll-top">
+                <i class="fa fa-angle-double-up"></i>
+            </a>
+            <!-- End Scroll Top -->
         <% end %>
 
-
-
-        <!-- Blank Section -->
-
-        <section class="ptb ptb-sm-80">
-
-          <%= yield %>
-
-        </section>
-        <!-- End Blank Section -->
-
-
-        <!-- FOOTER -->
-        <footer class="footer pt-80">
-            <div class="container">
-                <div class="row mb-60">
-                    <!-- Logo -->
-                    <div class="col-md-3 col-sm-3 col-xs-12 mb-xs-30">
-
-                        <a class="footer-logo" href="home.html">
-                            <h3 style="width:200px;">Lisa Jeon</h3>
-                        </a>
-                    </div>
-                    <!-- Logo -->
-
-                    <!-- Newsletter -->
-                    <div class="col-md-4 col-sm-5 col-xs-12 mb-xs-30">
-                        <div class="newsletter">
-                            <form>
-                                <input type="email" class="newsletter-input input-md newsletter-input mb-0" placeholder="Enter Your Email">
-                                <button class="newsletter-btn btn btn-xs btn-white" type="submit" value=""><i class="fa fa-angle-right mr-0"></i></button>
-                            </form>
-                        </div>
-                    </div>
-                    <!-- End Newsletter -->
-
-                    <!-- Social -->
-                    <div class="col-md-3 col-md-offset-2 col-sm-4 col-xs-12">
-                        <ul class="social">
-                            <li><a target="_blank" href="https://www.twitter.com/"><i class="fa fa-twitter"></i></a></li>
-                            <li><a target="_blank" href="https://instagram.com/"><i class="fa fa-instagram"></i></a></li>
-                            <li><a target="_blank" href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
-                            <li><a target="_blank" href="https://vimeo.com/"><i class="fa fa-vimeo-square"></i></a></li>
-                            <li><a target="_blank" href="https://www.behance.net/"><i class="fa fa-behance"></i></a></li>
-                        </ul>
-                    </div>
-                    <!-- End Social -->
-                </div>
-                <!--Footer Info -->
-                <div class="row footer-info mb-60">
-                    <div class="col-md-3 col-sm-12 col-xs-12 mb-sm-30">
-                        <p class="mb-xs-0">Our ante tincidunt tempus, Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros.</p>
-                        <a class="btn-link-a" href="about-1.html">Read More</a>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12 mb-sm-30 mb-xs-0">
-                        <ul class="link">
-                            <li><a href="blog-grid-3col.html">Blog</a></li>
-                            <li><a href="portfolio-grid-3col.html">Portfolio</a></li>
-                            <li><a href="login-register.html">Login & Signup</a></li>
-                            <li><a href="faq-1.html">FAQ</a></li>
-                            <li><a href="about-1.html">About</a></li>
-                            <li><a href="service-1.html">Service</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12 mb-sm-30">
-                        <ul class="link">
-                            <li><a href="contact-1.html">Contact Us</a></li>
-                            <li><a href="shop-checkout.html">Shopping Cart</a></li>
-                            <li><a href="404-error-1.html">404 Error</a></li>
-                            <li><a href="home.html">Home</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3 col-sm-12 col-xs-12">
-                        <p>502, DieSachbearbeiter, Schönhauser Allee, 167c10435 Berlin,Germany.</p>
-                        <ul class="link-small">
-                            <li><a href="mailto:yourname@domain.com"><i class="fa fa-envelope-o left"></i>yourname@domain.com</a></li>
-                            <li><a><i class="fa fa-phone left"></i>+40 (0) 012 345 6789</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- End Footer Info -->
-            </div>
-
-            <hr />
-
-            <!-- Copyright Bar -->
-            <section class="copyright ptb-60">
-                <div class="container">
-                    <p class="">
-                        © 2015 <a><b>Mazel Template</b></a>. All Rights Reserved.
-                        <br />
-                        Template  by <a target="_blank" href="http://nileforest.com/"><b>nileforest</b></a>
-                    </p>
-                </div>
-            </section>
-            <!-- End Copyright Bar -->
-
-        </footer>
-        <!-- END FOOTER -->
-
-        <!-- Scroll Top -->
-        <a class="scroll-top">
-            <i class="fa fa-angle-double-up"></i>
-        </a>
-        <!-- End Scroll Top -->
-
-    </div>
-    <!-- Site Wraper End -->
+</div>
+<!-- Site Wraper End -->
 
 
 

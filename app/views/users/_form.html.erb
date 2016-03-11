@@ -25,6 +25,13 @@
     </div>
 
     <div class="form-field-wrapper">
+      <div class = "bio">
+        <%= f.label :bio %>
+        <%= f.text_area :bio, :class => 'input-sm form-full' %>
+      </div>
+    </div>
+
+    <div class="form-field-wrapper">
       <div class = "password">
         <%= f.label :password %>
         <%= f.password_field :password, :class => 'input-sm form-full' %>
@@ -35,6 +42,13 @@
       <div class = "password_confirmation">
         <%= f.label :password_confirmation %>
         <%= f.password_field :password_confirmation, :class => 'input-sm form-full' %>
+      </div>
+    </div>
+
+    <div class="form-field-wrapper">
+      <div class = "image_upload">
+        <%= f.label :image_upload %>
+        <%= f.file_field :image_upload, :class => 'input-sm form-full' %>
       </div>
     </div>
 
