@@ -1,5 +1,5 @@
 class PortfoliosController < ApplicationController
-  skip_before_action :authorize, only: [:index, :show]
+  before_action :authorize, only: [:index, :show]
 
   def index
     @portfolio = Portfolio.all
