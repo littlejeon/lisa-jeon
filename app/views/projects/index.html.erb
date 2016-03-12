@@ -24,7 +24,19 @@
 
                     <!-- Shop info -->
                     <div class="col-md-6">
+                        <div class="shop-detail-info">
 
+                            <% if logged_in? %>
+                              <%= link_to 'EDIT', edit_project_path(project) %> 
+                              <%= link_to 'DELETE', project, method: :delete %>
+                            <% end %>
+
+                            <h3><%= project.name %></h3>
+                            <p class="ptb-10"><%= project.description %></p>
+                            <hr class="mtb-25" />
+
+                            
+                        </div>
 
 
                  
