@@ -10,7 +10,7 @@ class Project < ActiveRecord::Base
 
   def bullets_array=(bullets_array)
     bullets = bullets_array.split("+ ")
-    bullets.shift
+    # bullets.shift
     self.bullets = bullets
   end
 
