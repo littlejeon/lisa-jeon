@@ -4,11 +4,15 @@ class Project < ActiveRecord::Base
   validates_attachment_content_type :image_upload, content_type: /\Aimage\/.*\Z/
 
   def bullets_array
+    # binding.pry
+    # self.bullets
     bullets = self.bullets.join("+ ")
     "+ " + bullets
   end
 
   def bullets_array=(bullets_array)
+    # binding.pry
+    # self.bullets = bullets_array
     bullets = bullets_array.split("+ ")
     bullets.shift
     self.bullets = bullets

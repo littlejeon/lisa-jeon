@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :contacts
   resources :portfolios
   root 'welcome#index'
 
@@ -10,11 +11,12 @@ Rails.application.routes.draw do
   delete 'logout' => 'sessions#destroy'
   get 'about' => 'users#about'
   get 'resume' => 'users#resume'
-  get 'contact' => 'users#contact'
+  get 'contact' => 'contacts#new'
 
   resources :sessions
   resources :projects
   resources :users
+  resources :contacts
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
