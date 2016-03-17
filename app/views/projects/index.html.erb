@@ -6,7 +6,6 @@
                   <%= link_to 'NEW PROJECT', new_project_path, class: 'btn btn-sm btn-black' %>
                 <% end %>
                 <br><br>
-                <%= @array %>
               <% @project.each do |project| %>
                 <div class="row ">
                     <!-- Shop Item -->
@@ -36,8 +35,11 @@
                             <p class="ptb-10"><%= project.description %></p>
                             <hr class="mtb-25" />
 
-                              <%= project.bullets %>
-
+                            <ul>
+                              <% project.bullets.each do |bullet| %>
+                                  <li><%= bullet %></li>
+                              <% end %>
+                            </ul>
                             
                         </div>
 
