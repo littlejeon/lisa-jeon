@@ -4,6 +4,7 @@ class ProjectsController < ApplicationController
 
   def index
     @project = Project.all
+    @array = ["one", "two", "three", "four"]
   end
 
   def show
