@@ -21,11 +21,11 @@
                     <% @portfolio.each do |portfolio| %>
                         <div class="nf-item spacing <%= portfolio.tags %>">
                             <div class="item-box">
-                                <%= link_to portfolio.image_upload.url(:large), class: 'cbox-gallary1', title: portfolio.name do %>
+                                <%= link_to portfolio.image_upload.url(:large), class: 'cbox-gallary1', title: portfolio.description do %>
                                     <%= image_tag portfolio.image_upload.url(:medium), class: 'item-container', alt: '1' %>
                                     <div class="item-mask">
                                         <div class="item-caption">
-                                            <h5 class="white"><%= portfolio.description %></h5>
+                                            <h5 class="white"><%= portfolio.name %></h5>
                                             <!-- <p class="white"><%= portfolio.tags %></p> -->
                                             <% if logged_in? %>
                                                 <%= link_to 'EDIT', edit_portfolio_path(portfolio), class: 'white' %>

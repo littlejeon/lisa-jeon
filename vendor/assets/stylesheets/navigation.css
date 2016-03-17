@@ -109,7 +109,7 @@
 
 .navigation ul li:hover a, .header.sticky .navigation ul ul > li:hover > a, .header.sticky .navigation ul > li:hover > a,
 .navigation > ul > li.active > a {
-    color: #a3be0c;
+    color: #b00c42;
 }
 /*.navigation > ul > li.nav-has-sub > a {
   padding-right: 25px;
@@ -135,7 +135,7 @@
   transition: border-color 0.2s ease;
 }*/
 .navigation > ul > li.nav-has-sub:hover > a::after {
-    border-color: #a3be0c;
+    border-color: #b00c42;
 }
 
 .navigation ul ul {
@@ -211,7 +211,7 @@
 
     .navigation ul ul li:hover > a,
     .navigation ul ul li a:hover {
-        color: #a3be0c;
+        color: #b00c42;
     }
 
 .navigation ul ul li.nav-has-sub > a::after {
@@ -240,12 +240,12 @@
     left: 10px;
     border-bottom: 0;
     border-right: 0;
-    border-top: 1px solid #a3be0c;
-    border-left: 1px solid #a3be0c;
+    border-top: 1px solid #b00c42;
+    border-left: 1px solid #b00c42;
 }
 
 .navigation ul ul li.nav-has-sub:hover > a::after {
-    border-color: #a3be0c;
+    border-color: #b00c42;
 }
 
 @media all and (max-width: 991px){
@@ -338,7 +338,7 @@
         
             .navigation ul ul li:hover > a,
             .navigation ul ul li a:hover {
-                color: #a3be0c;
+                color: #b00c42;
             }
 
         .navigation ul ul ul li a {
