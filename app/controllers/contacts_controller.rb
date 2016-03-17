@@ -9,9 +9,12 @@ class ContactsController < ApplicationController
   end
 
   def create
+    puts "I'm in the create method"
     @contact = Contact.new(contact_params)
+    puts "I have access to the params"
     ContactMailer.welcome_email(contact_params).deliver_now
-    # redirect_to new_contact_path
+    puts "I tried to deliver the email"
+    redirect_to new_contact_path
   end
 
   private
