@@ -39,6 +39,8 @@ class UsersController < ApplicationController
     user.destroy
   end
 
+ 
+
 
 
   private
