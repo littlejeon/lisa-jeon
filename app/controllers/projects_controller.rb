@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  skip_before_action :authorize
+  skip_before_action :authorize, only: [:index, :show]
 
 
   def index
@@ -43,7 +43,7 @@ class ProjectsController < ApplicationController
 
   private
   def project_params
-    params.require(:project).permit(:name, :description, :link, :user_id, :image_upload, :bullets_array => [], :bullets => [])
+    params.require(:project).permit(:name, :description, :link, :user_id, :image_upload, :bullets_array, :bullets)
   end
 
 end
