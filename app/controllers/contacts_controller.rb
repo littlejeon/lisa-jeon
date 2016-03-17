@@ -11,7 +11,7 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
     ContactMailer.welcome_email(contact_params).deliver_now
-    redirect_to new_contact_path
+    # redirect_to new_contact_path
   end
 
   private
