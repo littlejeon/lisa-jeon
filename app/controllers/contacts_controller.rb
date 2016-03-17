@@ -5,6 +5,7 @@ class ContactsController < ApplicationController
   end 
 
   def new
+    puts "I'm in the new method"
     @contact = Contact.new
   end
 
