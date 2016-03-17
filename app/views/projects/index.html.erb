@@ -35,11 +35,7 @@
                             <p class="ptb-10"><%= project.description %></p>
                             <hr class="mtb-25" />
 
-                            <ul>
-                              <% project.bullets.each do |bullet| %>
-                                  <li><%= bullet %></li>
-                              <% end %>
-                            </ul>
+                              <%= project.bullets %>
                             
                         </div>
 
