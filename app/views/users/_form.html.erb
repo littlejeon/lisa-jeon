@@ -25,6 +25,20 @@
     </div>
 
     <div class="form-field-wrapper">
+      <div class = "linkedin">
+        <%= f.label :linkedin %>
+        <%= f.text_field :linkedin, :id => 'signup-linkedin', :class => 'input-sm form-full' %>
+      </div>
+    </div>
+
+    <div class="form-field-wrapper">
+      <div class = "github">
+        <%= f.label :github %>
+        <%= f.text_field :github, :id => 'signup-github', :class => 'input-sm form-full' %>
+      </div>
+    </div>
+
+    <div class="form-field-wrapper">
       <div class = "bio">
         <%= f.label :bio %>
         <%= f.text_area :bio, :class => 'input-sm form-full' %>

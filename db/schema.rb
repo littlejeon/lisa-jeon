@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160315044656) do
+ActiveRecord::Schema.define(version: 20160317064501) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -66,6 +66,8 @@ ActiveRecord::Schema.define(version: 20160315044656) do
     t.string   "image_upload_content_type"
     t.integer  "image_upload_file_size"
     t.datetime "image_upload_updated_at"
+    t.string   "linkedin"
+    t.string   "github"
   end
 
   add_foreign_key "projects", "users"
