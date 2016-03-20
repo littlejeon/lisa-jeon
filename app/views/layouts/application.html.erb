@@ -24,79 +24,13 @@
     <div class="wrapper">
 
         <!-- HEADER -->
-        <header class="header">
-            <div class="container">
 
-                <!-- logo -->
-                <div class="logo">
-                  <%= link_to root_path do %>
-                    <h3 style="width:300px;">Lisa Jeon</h3>
-                  <% end %>
-                </div>
+            <% if current_uri %>
+                <%= render 'layouts/homeheader' %>
+            <% else %>
+                <%= render 'layouts/header' %>
+            <% end %>
 
-                <!--End logo-->
-
-                <!-- Navigation Menu -->
-                <nav class='navigation'>
-                    <ul>
-                        <li>
-                            <%= link_to projects_path do %>
-                              Projects
-                            <% end %>
-                        </li>
-
-                        <li>
-                            <%= link_to portfolios_path do %>
-                                Portfolio
-                            <% end %>
-                        </li>
-                        <li>
-                            <%= link_to 'About', about_path %>
-                            <!-- Nav Dropdown -->
-                            <ul class="nav-dropdown">
-                                <li>
-                                    <%= link_to 'About', about_path %>
-                                </li>                                
-                                <li>
-                                    <%= link_to 'Contact', new_contact_path %>
-                                </li>
-                                <li>
-                                    <%= link_to 'Resume', 'https://dl.dropboxusercontent.com/u/6701955/LisaJeon_Resume.pdf', target: '_blank' %>
-                                </li>
-                            </ul>
-                            <!-- End Nav Dropdown -->
-                        </li>
-
-
-
-                        <li>
-                            <%= link_to 'https://littlejeon.ghost.io/', target: 'blank' do %>
-                                Blog
-                            <% end %>
-                        </li>
-
-                        <% if logged_in? %>
-                            <li>
-                                <%= link_to "Log Out", logout_path, method: :delete %> 
-                            </li>
-                            <li>
-                                <%= link_to "#" do %> 
-                                    <div class="fa fa-cog fa-2x" style="margin-top:-6px;"></div>
-                                <%end%>
-                                <ul class="nav-dropdown">
-                                    <li>
-                                        <%= link_to 'Update Profile', edit_user_path(current_user) %>
-
-                                    </li>
-                                </ul>
-                            </li>
-                        <% end %>
-                    </ul>
-                </nav>
-                <!--End Navigation Menu -->
-
-            </div>
-        </header>
         <!-- END HEADER -->
 
         <% if current_uri %>
