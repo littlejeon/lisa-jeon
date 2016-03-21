@@ -69,12 +69,10 @@ h3:after {
                         <%= link_to "Log Out", logout_path, method: :delete %> 
                     </li>
                     <li>
-                        <%= link_to "#" do %> 
-                            <div class="fa fa-cog fa-2x" style="margin-top:-6px;"></div>
-                        <%end%>
+                        <%= link_to 'Update Profile', edit_user_path(current_user), class: "fa fa-cog fa-2x", style: "margin-top:-6px;"  %>
                         <ul class="nav-dropdown">
                             <li>
-                                <%= link_to 'Update Profile', edit_user_path(current_user) %>
+                                <%= link_to 'Update Profile', edit_user_path(current_user), class: "fa fa-cog fa-2x", style: "margin-top:-6px;"  %>
 
                             </li>
                         </ul>

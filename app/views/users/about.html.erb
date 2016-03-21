@@ -1,28 +1,25 @@
-<div class="container">
-  <!-- LEFT SIDE -->
-  <div class="col-sm-12 col-md-4 col-lg-5">
-    <div class="container">
-    <%= image_tag lisa.image_upload.url(:large), style: 'width:350px;' %>
+<div class="col-sm-12 col-md-12 col-lg-8 col-lg-offset-2">
+
+    <!-- LEFT SIDE -->
+    <div class="col-sm-5 col-md-5 col-lg-5" style="margin-top:30px;">
+      <%= image_tag lisa.image_upload.url(:large), style: 'width:350px;' %>
     </div>
-  </div>
-  <!-- LEFT SIDE END -->
+    <!-- LEFT SIDE END -->
 
-  <!-- RIGHT SIDE -->
-  <div class="col-sm-12 col-md-8 col-lg-7 mtb-25">
-    <h2>About <%= lisa.name %></h2>
-    <p style="line-height:24px;"><%= lisa.bio %></p>
+    <!-- RIGHT SIDE -->
+    <div class="col-sm-7 col-md-7 col-lg-7 mtb-25">
+      <h2>About <%= lisa.name %></h2>
+      <p style="line-height:23px; font-size:13px;"><%= lisa.bio %></p>
 
-    <!-- Social -->
-    <div class="mtb-25" id="social">
+      <!-- Social -->
+      <div class="mtb-25" id="social">
 
-      <%= link_to "", lisa.linkedin, class: 'fa fa-linkedin fa-2x', target: '_blank' %>
-      <%= link_to "", lisa.github, class: 'fa fa-github fa-2x', target: '_blank' %>
-      <%= link_to "", new_contact_path, class: 'fa fa-envelope fa-2x' %>
-      
-
+        <%= link_to "", lisa.linkedin, class: 'fa fa-linkedin fa-2x', target: '_blank' %>
+        <%= link_to "", lisa.github, class: 'fa fa-github fa-2x', target: '_blank' %>
+        <%= link_to "", new_contact_path, class: 'fa fa-envelope fa-2x' %>
+      </div>
+      <!-- End Social -->
 
     </div>
-    <!-- End Social -->
-  </div>
-  <!-- RIGHT SIDE END -->
+    <!-- RIGHT SIDE END -->
 </div>
