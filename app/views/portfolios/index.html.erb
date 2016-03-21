@@ -5,16 +5,16 @@
                 <div class="row">
                     <ul class="container-filter categories-filter">
                         <li><a class="categories active" data-filter="*">All</a></li>
-                        <li><a class="categories" data-filter=".illustration">Illustration</a></li>
-                        <li><a class="categories" data-filter=".art">Photography</a></li>
                         <li><a class="categories" data-filter=".graphicdesign">Graphic Design</a></li>
+                        <li><a class="categories" data-filter=".illustration">Illustration</a></li>
+                        <li><a class="categories" data-filter=".art">Art</a></li>
                         <% if logged_in? %>
                             <%= link_to 'NEW', new_portfolio_path, class: "btn btn-sm btn-black" %>
                             
                         <% end %>
                     </ul>
                 </div>
-                <!-- End work Filter -->
+                <!-- End work Filter -->    
                 <div class="row container-masonry nf-col-4">
 
 
