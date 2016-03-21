@@ -12,7 +12,7 @@ class Portfolio < ActiveRecord::Base
   #   size: { in: 0..100.kilobytes }
 
   def portfolio_tags=(portfolio_tags)
-    self.tags = portfolio_tags.to_s.upcase
+    self.tags = portfolio_tags.to_s.downcase
   end
 
   def portfolio_tags
